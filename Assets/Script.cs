@@ -53,9 +53,7 @@ public class MyList
     public bool Remove(int item)
     {
         while(IndexOf(item) != -1)
-        {
             RemoveAt(IndexOf(item));
-        }
         Debug.Log($"all elements {item} removed from array");
         return false;
     }
@@ -71,6 +69,9 @@ public class MyList
 
     public bool Contains(int item)
     {
+        for (int i= 0; i < this.Count; ++i)
+            if(m_array[i] == item)
+                return true;
         return false;
     }
     
@@ -122,10 +123,8 @@ public class Script : MonoBehaviour
                 myList.Add(newElem);
             }
             else
-            {
                 Debug.Log($"array is full. clear it wits \"C\" key or delete last element with \"D\" key");
                 
-            }
         }
         if(Input.GetKeyDown(KeyCode.W))
         {
@@ -141,6 +140,8 @@ public class Script : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.C))
         {
+            if(myList.Count == myList.Capacity)
+                myList.Count--; //  ???
             myList.Clear();
             Debug.Log($"array was cleared with {myList.Capacity} free element space");
         }
@@ -157,6 +158,13 @@ public class Script : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.S))
             ShowList();
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            if (myList.Contains(1))
+                Debug.Log($"element \"1\" is in array");
+            else
+                Debug.Log($"there are no elements \"1\" in array");
+        }
     }
     private void ShowList()
     {
