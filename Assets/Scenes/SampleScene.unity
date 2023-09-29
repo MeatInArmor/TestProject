@@ -208,7 +208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &293999512
 RectTransform:
   m_ObjectHideFlags: 0
@@ -541,6 +541,8 @@ GameObject:
   - component: {fileID: 922387446}
   - component: {fileID: 922387445}
   - component: {fileID: 922387449}
+  - component: {fileID: 922387450}
+  - component: {fileID: 922387451}
   m_Layer: 5
   m_Name: HelloWorld
   m_TagString: Untagged
@@ -747,6 +749,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a98ba37e226ffb4e9135379334019ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &922387450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922387443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1099a59fc7dab4995f9983c1902cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &922387451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922387443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d7f1ee59f7f174d88d47518b5d0919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &963194225
